@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        .item {
+            width: 24%;
+            display: inline-block;
+        }
+
+        .map {
+            width: 100%;
+            height: 300px;
+        }
+
+        h5 {
+            font-size: 16px;
+        }
+
+        #info {
+            z-index: 1;
+            opacity: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* margin: 0; */
+            background: rgba(52, 53, 55, 0.7);
+            color: white;
+            border: 0;
+            transition: opacity 100ms ease-in;
+            width: 500px;
+            /* min-height: 2em; */
+        }
+    </style>
+</head>
+<body>
+    <pre id="info">&nbsp;</pre>
+    <div>
+        <div class="item" style="display:;">
+            <h5>CubeWerx - MVT</h5>
+            <div id="map-cubewerx-mvt" class="map"></div>
+        </div>
+        <div class="item">
+            <h5>Ecere - MVT</h5>
+            <div id="map-ecere-mvt" class="map"></div>
+        </div>
+        <div class="item" style="display:;">
+            <h5>GeoSolution - MVT</h5>
+            <div id="map-geosolution-mvt" class="map"></div>
+        </div>
+        <div class="item">
+            <h5>Interactive-instruments - MVT</h5>
+            <div id="map-ii-mvt" class="map"></div>
+        </div>
+    </div>
+    <div>
+        <div class="item">
+            <h5>CubeWerx - JVT</h5>
+            <div id="map-cubewerx-jvt" class="map"></div>
+        </div>
+        <div class="item">
+            <h5>Ecere - JVT</h5>
+            <div id="map-ecere-jvt" class="map"></div>
+        </div>
+        <div class="item" style="display:;">
+            <h5>GeoSolution - JVT</h5>
+            <div id="map-geosolution-jvt" class="map"></div>
+        </div>
+        <div class="item" style="display:;">
+            <h5>Interactive-instruments - JVT</h5>
+            <div id="map-ii-jvt" class="map"></div>
+        </div>
+    </div>
+
+</body>
+</html>
+<!--jquery-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<!--openlayers-->
+<script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.1.3/build/ol.js"></script>
+<link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.1.3/css/ol.css">
+<script src="www.openmaptiles.org-master/maps/olms.js"></script>
+<!--layer switcher-->
+<script src="ol-layerswitcher-master/dist/ol-layerswitcher.js"></script>
+<link href="ol-layerswitcher-master/src/ol-layerswitcher.css" rel="stylesheet" />
+<link href="ol-layerswitcher-master/examples/scroll.css" rel="stylesheet" />
+<style>
+    .layer-switcher {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        text-align: left;
+    }
+</style>
+<script>var maps = [];</script>
+
+<script>
+    var default_zoom = 9;
+    var default_position = [36.102615, 32.622897];
+    function moveend(event) {
+        var map = event.map;
+        var center = map.getView().getCenter();
+        var z = map.getView().getZoom();
+        for (var j = 0; j < maps.length; j++) {
+            var map = maps[j]
+            map.setView(new ol.View({
+                center: center,
+                zoom: z
+            }));
+        }
+    }
+
+    //for (var i = 0; i < maps.length; i++) {
+    //    //continue;
+    //    maps[i].on('moveend', function (event) {
+    //        moveend(event);
+    //    });
+    //    maps[i].on('pointermove', showInfo);
+    //}
+
+    var info = document.getElementById('info');
+    function showInfo(event) {
+        var map = event.map;
+        var features = map.getFeaturesAtPixel(event.pixel);
+        if (!features) {
+            info.innerText = '';
+            info.style.opacity = 0;
+            return;
+        }
+        var properties = features[0].getProperties();
+        //console.log(JSON.stringify(properties, null, 2));
+        if (properties.layer) {
+            //info.innerText = JSON.stringify(properties, null, 2);
+            info.innerText = properties.layer;
+            info.style.opacity = 0.8;
+        }
+    }
+</script>
+<script src="style.js"></script>
+
+<script src="II.js"></script>
+
+<script src="CubeWerx.js"></script>
+
+<script src="GeoSolution.js"></script>
+<script src="Ecere.js"></script>

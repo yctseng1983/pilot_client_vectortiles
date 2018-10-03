@@ -1,0 +1,376 @@
+{
+    "version": 8,
+    "name": "Blue Light Readable Blue",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "template",
+        "mapbox:sdk-support": {
+            "js": "0.46.0",
+            "android": "6.0.0",
+            "ios": "4.0.0"
+        },
+        "mapbox:groups": {}
+    },
+    "center": [36.13032027657766, 32.58484550513343],
+    "zoom": 12.52406688264992,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "composite": {"url": "mapbox://d5029.0ygmoxzu", "type": "vector"}
+    },
+    "sprite": "mapbox://sprites/d5029/cjmafku9ugola2rn6pwqf0418",
+    "glyphs": "mapbox://fonts/d5029/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "layout": {},
+            "paint": {"background-color": "hsla(242, 91%, 93%, 0)"}
+        },
+        {
+            "id": "agriculturesrf",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "AgricultureSrf",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(250, 53%, 77%, 0.5)",
+                "fill-outline-color": "#7767c2"
+            }
+        },
+        {
+            "id": "agriculturepnt",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "AgriculturePnt",
+            "layout": {},
+            "paint": {"circle-color": "#7767c2"}
+        },
+        {
+            "id": "militarysrf",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "MilitarySrf",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(249, 53%, 77%, 0.5)",
+                "fill-outline-color": "#7766c2"
+            }
+        },
+        {
+            "id": "culturesrf",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "CultureSrf",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(248, 53%, 77%, 0.2)",
+                "fill-outline-color": "#ada5e3"
+            }
+        },
+        {
+            "id": "aeronauticsrf",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "AeronauticSrf",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(251, 43%, 58%, 0.1)",
+                "fill-outline-color": "#7767c2"
+            }
+        },
+        {
+            "id": "aeronauticcrv",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "AeronauticCrv",
+            "layout": {},
+            "paint": {"line-color": "#7767c2", "line-width": 1}
+        },
+        {
+            "id": "facilitysrf",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "FacilitySrf",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(251, 43%, 58%, 0.1)",
+                "fill-outline-color": "#7767c2"
+            }
+        },
+        {
+            "id": "industrysrf",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "IndustrySrf",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(248, 53%, 77%, 0.5)",
+                "fill-outline-color": "#ada5e3"
+            }
+        },
+        {
+            "id": "physiographycrv",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "PhysiographyCrv",
+            "layout": {},
+            "paint": {"line-color": "#7767c2"}
+        },
+        {
+            "id": "recreationcrv",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "RecreationCrv",
+            "layout": {},
+            "paint": {"line-color": "#7767c2"}
+        },
+        {
+            "id": "recreationsrf",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "RecreationSrf",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(248, 53%, 77%, 0.5)",
+                "fill-outline-color": "#ada5e3"
+            }
+        },
+        {
+            "id": "settlementsrf",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "SettlementSrf",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(248, 53%, 77%, 0.3)",
+                "fill-outline-color": "#7767c2"
+            }
+        },
+        {
+            "id": "structurecrv",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "StructureCrv",
+            "layout": {},
+            "paint": {"line-color": "#7767c2"}
+        },
+        {
+            "id": "structuresrf",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "StructureSrf",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(248, 53%, 77%, 0.3)",
+                "fill-outline-color": "#ada5e3"
+            }
+        },
+        {
+            "id": "transportationgroundcrv",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "TransportationGroundCrv",
+            "layout": {},
+            "paint": {
+                "line-color": "#7767c2",
+                "line-width": 1,
+                "line-gap-width": 0,
+                "line-offset": 0
+            }
+        },
+        {
+            "id": "structurepnt",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "StructurePnt",
+            "layout": {},
+            "paint": {
+                "circle-color": "hsl(249, 48%, 67%)",
+                "circle-radius": 5,
+                "circle-stroke-width": 0,
+                "circle-stroke-color": "hsl(0, 0%, 100%)"
+            }
+        },
+        {
+            "id": "transportationgroundsrf",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "TransportationGroundSrf",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(248, 53%, 77%, 0.5)",
+                "fill-outline-color": "#ada5e3"
+            }
+        },
+        {
+            "id": "transportationwatercrv",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "TransportationWaterCrv",
+            "layout": {},
+            "paint": {"line-color": "#7767c2", "line-width": 1}
+        },
+        {
+            "id": "utilityinfrastructurecrv",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "UtilityInfrastructureCrv",
+            "layout": {},
+            "paint": {"line-color": "#7767c2", "line-width": 2}
+        },
+        {
+            "id": "utilityinfrastructurepnt",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "UtilityInfrastructurePnt",
+            "layout": {},
+            "paint": {
+                "circle-color": "hsl(250, 0%, 100%)",
+                "circle-stroke-color": "#7d6ec8",
+                "circle-stroke-width": 1,
+                "circle-radius": 4
+            }
+        },
+        {
+            "id": "vegetationsrf",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "VegetationSrf",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(248, 53%, 77%, 0.5)",
+                "fill-outline-color": "hsl(248, 53%, 77%)"
+            }
+        },
+        {
+            "id": "o2s-l",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "o2s_L",
+            "layout": {},
+            "paint": {"line-color": "#7767c2", "line-width": 1.2}
+        },
+        {
+            "id": "hydrographysrf",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "HydrographySrf",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(197, 100%, 44%, 0.1)",
+                "fill-outline-color": "#00a0df"
+            }
+        },
+        {
+            "id": "hydrographypnt",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "HydrographyPnt",
+            "layout": {},
+            "paint": {
+                "circle-color": "#c7effe",
+                "circle-stroke-color": "#00a0df",
+                "circle-stroke-width": 1
+            }
+        },
+        {
+            "id": "hydrographycrv",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "HydrographyCrv",
+            "layout": {},
+            "paint": {
+                "line-color": "#00a0df",
+                "line-opacity": 1,
+                "line-width": 1
+            }
+        },
+        {
+            "id": "o2s-a",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "o2s_A",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(248, 53%, 77%, 0.5)",
+                "fill-outline-color": "#ada5e3"
+            }
+        },
+        {
+            "id": "transportationgroundpnt",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "TransportationGroundPnt",
+            "layout": {},
+            "paint": {"circle-color": "hsl(249, 48%, 67%)"}
+        },
+        {
+            "id": "settlementpnt",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "SettlementPnt",
+            "layout": {},
+            "paint": {
+                "circle-color": "hsl(244, 59%, 90%)",
+                "circle-stroke-color": "#8e82d3",
+                "circle-stroke-width": 2
+            }
+        },
+        {
+            "id": "o2s-p",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "o2s_P",
+            "layout": {},
+            "paint": {"circle-color": "#8e82d3"}
+        },
+        {
+            "id": "culturepnt",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "CulturePnt",
+            "layout": {},
+            "paint": {"circle-color": "#8e82d3"}
+        },
+        {
+            "id": "recreationpnt",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "RecreationPnt",
+            "layout": {},
+            "paint": {"circle-color": "hsl(249, 48%, 67%)"}
+        },
+        {
+            "id": "facilitypnt",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "FacilityPnt",
+            "layout": {},
+            "paint": {
+                "circle-color": "#8e82d3",
+                "circle-stroke-width": 0,
+                "circle-stroke-color": "#7767c2"
+            }
+        },
+        {
+            "id": "informationpnt",
+            "type": "circle",
+            "source": "composite",
+            "source-layer": "InformationPnt",
+            "layout": {},
+            "paint": {
+                "circle-color": "hsl(29, 100%, 74%)",
+                "circle-stroke-color": "#7767c2",
+                "circle-stroke-width": 2.1,
+                "circle-radius": 5
+            }
+        }
+    ],
+    "created": "2018-09-20T10:25:58.132Z",
+    "id": "cjmafku9ugola2rn6pwqf0418",
+    "modified": "2018-09-21T03:10:19.029Z",
+    "owner": "d5029",
+    "visibility": "private",
+    "draft": false
+}
